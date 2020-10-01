@@ -11,7 +11,7 @@ This script:
 
 ## Requirements
 
-  - **Python 3.X**\
+  - **Python 3.X**
   
   - **bwa** to align paired-end reads to the reference genome
 
@@ -39,9 +39,8 @@ The script will be in the GenomeCoverage subdirectory
 
    **-i**    Index genome before alignment\
    **-I**    Paired-end reads input: 2nd and 3rd positional arguments\
-   **-L**    Long reads input: 2nd positional argument 
-   
-Note: Reference genome as first positional argument
+   **-L**    Long reads input: 2nd positional argument \
+   Reference genome to be used as first positional argument
 
 
 
