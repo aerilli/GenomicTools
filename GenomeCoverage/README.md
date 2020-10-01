@@ -11,7 +11,8 @@ This script:
 
 ## Requirements
 
-
+  - **Python 3.X**\
+  
   - **bwa** to align paired-end reads to the reference genome
 
   - **minimap2**  to align long reads
