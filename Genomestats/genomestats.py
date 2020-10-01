@@ -38,9 +38,9 @@ if __name__ == "__main__":
 
 
 #type of output file
-if args.output == 'csv':
+if args.format == 'csv':
     output = ','
-elif args.output == 'tsv':
+elif args.format == 'tsv':
     output = '\t'
 else:
     raise Exception('Invalid output format')
@@ -200,12 +200,12 @@ for fastafile in args.infile:
     df.set_index('Stat',inplace=True)
 
 #Sending df to csv file
-df.to_csv ('./{}.csv'.format(args.name), index = True, float_format='%.16g', header=True, sep = output)
+df.to_csv ('./{}.csv'.format(args.output), index = True, float_format='%.16g', header=True, sep = output)
 
 
 #checking if the output is ok...
-if path.exists('./{}.csv'.format(args.name)):  
+if path.exists('./{}.csv'.format(args.output)):  
     print('\nstats file succesfully created')
-elif not path.exists('./{}.csv'.format(args.name)) or stat('./{}.csv'.format(args.name)).st_size == 0:
+elif not path.exists('./{}.csv'.format(args.output)) or stat('./{}.csv'.format(args.output)).st_size == 0:
     print("\nstats file not created")
     raise Exception ('Output problem: file either empty or not existing')
