@@ -3,7 +3,7 @@
 This script:
 
   1. takes genomic reads input files.fastq
-  2. maps them to the reference genome.fasta, via bwa if Illumina paired-end reads are given or via minimap2 if Oxford Nanopore/PacBio reads file is given
+  2. maps them to the reference genome.fasta, via bwa if Illumina paired-end reads files are given or via minimap2 if Oxford Nanopore/PacBio reads file is given
   3. assesses genome coverage, using bedtools
   4. outputs a .genomecoverage file
 
@@ -36,9 +36,9 @@ The script will be in the GenomeCoverage subdirectory
 
 ## Options:
 
-   **-i**    Index genome before alignment
-   **-I**    Paired-end reads input: 2nd and 3rd positional arguments
-   **-L**    Long reads input: 2nd positional argument
+   **-i**    Index genome before alignment\
+   **-I**    Paired-end reads input: 2nd and 3rd positional arguments\
+   **-L**    Long reads input: 2nd positional argument 
    
 Note: Reference genome as first positional argument
 
