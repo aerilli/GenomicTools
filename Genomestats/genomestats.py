@@ -8,7 +8,7 @@ Stats about gaps can be retrieved (see GAPSTATS).
 Automatically detected default gap sizes (>20% entire set of gap values), can be excluded from gap stats calculation (see DEFVAL(GAPSTATS)).
 
 Instructions to run the script:
-genomestats.py [-h --help] INPUTFILE[--infile -i] MINSIZEBP[--minsize -m] OUTPUTNAME[--name -n] OUTPUTFORMAT[--output -o] GAPSTATS[--gapstats -g] DEFVALUES(GAPSTATS)[--DEFVAL -D] [-v --version]
+genomestats.py [-h --help] INPUTFILE[--infile -i] MINSIZEBP[--minsize -m] OUTPUTNAME[--output -o] OUTPUTFORMAT[--format -f] GAPSTATS[--gapstats -g] DEFVALUES(GAPSTATS)[--DEFVAL -D] [-v --version]
 INPUTFILE is required
 
 Version 0.0.2 (Beta)
@@ -25,7 +25,7 @@ import N_GAPS
 
 #SETTING FLAGS
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='This script takes a fasta input file (-i: required!) and returns several stats in a csv file: n° of seqs, total size in nt, min_size, max_size, average_size, min-size_xbp(for x value, see MINSIZE), N50/L50, N90/L90; Stats about N gaps can be retrieved (see GAPSTAT) and automatically detected default gap sizes (>20% entire set of gap values), can be excluded from gap stats calculation (see DEFVAL)\nusage: creepyfasta.py [-h] INPUTFILE[--infile -i] MINSIZEBP[--minsize -m] OUTPUTNAME[--name -n] OUTPUTFORMAT[--output -o] GAPSTATS[--gapstats -g] DEFVALUES(GAPSTATS)[--DEFVAL -D] [-v]')
+    parser = argparse.ArgumentParser(description='This script takes a fasta input file (-i: required!) and returns several stats in a csv file: n° of seqs, total size in nt, min_size, max_size, average_size, min-size_xbp(for x value, see MINSIZE), N50/L50, N90/L90; Stats about N gaps can be retrieved (see GAPSTAT) and automatically detected default gap sizes (>20% entire set of gap values), can be excluded from gap stats calculation (see DEFVAL)\nusage: creepyfasta.py [-h] INPUTFILE[--infile -i] MINSIZEBP[--minsize -m] OUTPUTNAME[--output -o] OUTPUTFORMAT[--format -f] GAPSTATS[--gapstats -g] DEFVALUES(GAPSTATS)[--DEFVAL -D] [-v]')
     parser.add_argument('-i','--infile', nargs='*', type=str, help="input fasta file(s)", required=True)
     parser.add_argument('-g', '--gapstats', help='Retrieve stats about gaps (N)', action='store_true')
     parser.add_argument('-D','--DEFVAL', help='To be run with -g - Consider default gap size values, otherwise removed (stderr)', action='store_true', default=False)
